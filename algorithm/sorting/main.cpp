@@ -3,6 +3,7 @@
 #include "ISort.hpp"
 #include "BubbleSort.hpp"
 #include "SelectionSort.hpp"
+#include "InsertionSort.hpp"
 
 void print(
 	const std::vector<int>& sorted)
@@ -30,6 +31,7 @@ int main()
 			7, 6, 5, 4, 3, 2, 1, 0};
 	ISort* bbsort = new BubbleSort();
 	ISort* selsort = new SelectionSort();
+	ISort* insort = new InsertionSort();
 
 	std::cout << "BubbleSort\n";
 	print(bbsort->sort(unsorted));
@@ -40,4 +42,10 @@ int main()
 	print(selsort->sort(unsorted));
 	print(selsort->sort(worse));
 	print(selsort->idealSort(worse));
+
+	std::cout << "\nInsertionSort\n";
+	print(insort->sort(unsorted));
+	print(insort->sort(worse));
+	print(insort->idealSort(worse));
+
 }
