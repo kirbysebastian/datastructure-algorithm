@@ -4,6 +4,8 @@
 #include "BubbleSort.hpp"
 #include "SelectionSort.hpp"
 #include "InsertionSort.hpp"
+#include "MergeSort.hpp"
+#include "QuickSort.hpp"
 
 void print(
 	const std::vector<int>& sorted)
@@ -23,8 +25,10 @@ void print(
 
 int main()
 {
-	std::vector<int> unsorted =
-		{99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+	//std::vector<int> unsorted =
+	//	{99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+	std::vector<int> unsorted = 
+		{3, 7, 8, 5, 2, 1, 9, 6, 0, 4};
 	std::vector<int> worse =
 		{99, 88, 77, 66, 55, 50, 49, 48, 47, 46, 45,
 			44, 43, 42, 41, 40, 30, 20, 10, 9, 8,
@@ -32,6 +36,8 @@ int main()
 	ISort* bbsort = new BubbleSort();
 	ISort* selsort = new SelectionSort();
 	ISort* insort = new InsertionSort();
+	ISort* mergesort = new MergeSort();
+	ISort* quicksort = new QuickSort();
 
 	std::cout << "BubbleSort\n";
 	print(bbsort->sort(unsorted));
@@ -48,4 +54,13 @@ int main()
 	print(insort->sort(worse));
 	print(insort->idealSort(worse));
 
+	std::cout << "\nMergeSort\n";
+	print(mergesort->sort(unsorted));
+	print(mergesort->sort(worse));
+	print(mergesort->idealSort(worse));
+
+	std::cout << "\nQuickSort\n";
+	print(quicksort->sort(unsorted));
+	print(quicksort->sort(worse));
+	print(quicksort->idealSort(worse));
 }
