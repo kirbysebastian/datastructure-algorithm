@@ -9,12 +9,12 @@ BinarySearchTree<int>::BinarySearchTree() :
 
 template<>
 BinaryNode<int>* BinarySearchTree<int>::findSuccessor(
-	BinaryNode<int>* rootnode)
+	BinaryNode<int>*& rootnode)
 {
 	if (rootnode == nullptr)  // lesslikely
 		return nullptr;
 
-	auto node = rootnode;
+	BinaryNode<int>* node = rootnode;
 	BinaryNode<int>* parentNode = nullptr;
 	BinaryNode<int>* grandParent = nullptr;
 	while (node != nullptr)
@@ -26,15 +26,11 @@ BinaryNode<int>* BinarySearchTree<int>::findSuccessor(
 
 	BinaryNode<int>* successor = new BinaryNode<int>(parentNode->value);
 	if (grandParent != nullptr)
-	{
 		grandParent->left = parentNode->right;
-	}
-
-	//successor->left = parentNode->left;
-	//successor->right = parentNode->right;
+	else
+		rootnode = nullptr;
 
 	//parentNode = nullptr;
-	rootnode = nullptr;
 	return successor;
 }
 
@@ -114,6 +110,7 @@ bool BinarySearchTree<int>::remove(int val)
 			else
 			{
 				auto newnode = findSuccessor(node->right);
+				std::cout << "SUCCESSOR VAL: " << newnode->value << "\n";
 				if (parentNode == nullptr)
 					root_ = newnode;
 				else if (newnode->value < parentNode->value)
@@ -121,10 +118,10 @@ bool BinarySearchTree<int>::remove(int val)
 				else
 					parentNode->right = newnode;
 
-				if (newnode->value < node->value)
-					node->left = nullptr;
-				else if (newnode->value > node->value)
-					node->right = nullptr;
+				//if (newnode->value < node->value)
+				//	node->left = nullptr;
+				//else if (newnode->value > node->value)
+				//	node->right = nullptr;
 
 				newnode->left = node->left;
 				newnode->right = node->right;

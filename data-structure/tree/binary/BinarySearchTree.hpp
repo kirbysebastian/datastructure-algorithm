@@ -23,7 +23,7 @@ public:
 	void print() const;
 
 private:
-	BinaryNode<T>* findSuccessor(BinaryNode<T>*);
+	BinaryNode<T>* findSuccessor(BinaryNode<T>*&);
 	void print(BinaryNode<T>*) const;
 
 	int size_;
