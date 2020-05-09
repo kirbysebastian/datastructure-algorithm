@@ -17,11 +17,10 @@ int main()
 	bst.insert(39);
 	std::cout << "BinarySearchTree\n";
 	std::cout << "Size: " << bst.size() << "\n";
-	//bst.remove(10);
-	//bst.remove(17);
-	//bst.remove(8);
-	bst.remove(50);
-	bst.remove(30);
-	bst.print();
+	bst.remove(19);
+	std::cout << "Size: " << bst.size() << "\n";
+	std::cout << "41 in bst: " << bst.peek(41) << "\n";
+	std::cout << "31 in bst: " << bst.peek(31) << "\n";
+	std::cout << "19 in bst: " << bst.peek(19) << "\n";
 }
 

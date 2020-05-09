@@ -37,6 +37,21 @@ BinaryNode<int>* BinarySearchTree<int>::findSuccessor(
 template<>
 bool BinarySearchTree<int>::peek(int val) const
 {
+	if (root_ == nullptr)
+		return false;
+
+	auto node = root_;
+	while (node != nullptr)
+	{
+		if (val == node->value)
+			return true;
+
+		if (val < node->value)
+			node = node->left;
+		else if (val > node->value)
+			node = node->right;
+	}
+
 	return false;
 }
 
