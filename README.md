@@ -5,6 +5,7 @@ Learning the topic and writing my own implementation of data structures and algo
 - ~~Restructure the project folder~~
 - Create CMakeLists
 - Create Unit Tests
+- Create Travis-CI
 - List all missing data structures and algorithms 
 - Implement missing data structures and algorithms (with test)
 
