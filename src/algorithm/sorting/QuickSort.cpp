@@ -1,4 +1,4 @@
-#include "QuickSort.hpp"
+#include "algorithm/sorting/QuickSort.hpp"
 
 QuickSort::QuickSort() {}
 

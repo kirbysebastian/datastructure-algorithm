@@ -1,5 +1,5 @@
 #include <iostream>
-#include "BinarySearchTree.hpp"
+#include "data-structure/tree/binary/BinarySearchTree.hpp"
 
 template<>
 BinarySearchTree<int>::BinarySearchTree() :

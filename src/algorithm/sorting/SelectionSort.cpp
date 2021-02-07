@@ -1,4 +1,4 @@
-#include "SelectionSort.hpp"
+#include "algorithm/sorting/SelectionSort.hpp"
 
 SelectionSort::SelectionSort() {}
 

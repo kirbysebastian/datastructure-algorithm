@@ -1,4 +1,4 @@
-#include "BubbleSort.hpp"
+#include "algorithm/sorting/BubbleSort.hpp"
 
 BubbleSort::BubbleSort()
 {}

@@ -1,4 +1,4 @@
-#include "InsertionSort.hpp"
+#include "algorithm/sorting/InsertionSort.hpp"
 
 InsertionSort::InsertionSort() {}
 

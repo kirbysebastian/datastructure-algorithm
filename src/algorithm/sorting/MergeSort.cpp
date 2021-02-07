@@ -1,4 +1,4 @@
-#include "MergeSort.hpp"
+#include "algorithm/sorting/MergeSort.hpp"
 
 MergeSort::MergeSort() {}
 
